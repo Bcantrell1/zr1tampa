@@ -5,8 +5,8 @@ import React from 'react'
 import Balancer from 'react-wrap-balancer'
 
 import { Section } from '@/components/Section'
-import { Button } from '@/components/ui/button'
 import type { Footer } from 'payload-types'
+import { Button } from '../../ui/button'
 
 export default function Footer({ initialFooter }: { initialFooter: Footer | null }) {
   const navItems = initialFooter?.navItems || []
