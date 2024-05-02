@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  
+:root  {
+  --background: 360 0% 95%;
+  --foreground: 360 0% 0%;
+  --card: 360 0% 90%;
+  --card-foreground: 360 0% 10%;
+  --popover: 360 0% 95%;
+  --popover-foreground: 360 95% 0%;
+  --primary: 360 92% 58%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 360 10% 70%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 322 10% 85%;
+  --muted-foreground: 360 0% 35%;
+  --accent: 322 10% 80%;
+  --accent-foreground: 360 0% 10%;
+  --destructive: 0 50% 30%;
+  --destructive-foreground: 360 0% 90%;
+  --border: 360 20% 50%;
+  --input: 360 20% 18%;
+  --ring: 360 92% 58%;
+  --radius: 0.5rem;
+}
+.dark  {
+  --background: 360 10% 5%;
+  --foreground: 360 0% 90%;
+  --card: 360 0% 0%;
+  --card-foreground: 360 0% 90%;
+  --popover: 360 10% 5%;
+  --popover-foreground: 360 0% 90%;
+  --primary: 360 92% 58%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 360 10% 10%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 322 10% 15%;
+  --muted-foreground: 360 0% 60%;
+  --accent: 322 10% 15%;
+  --accent-foreground: 360 0% 90%;
+  --destructive: 0 50% 30%;
+  --destructive-foreground: 360 0% 90%;
+  --border: 360 20% 18%;
+  --input: 360 20% 18%;
+  --ring: 360 92% 58%;
+  --radius: 0.5rem;
+}
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* font-feature-settings: "rlig" 1, "calt" 1; */
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background;
+    @apply ml-[-50px] mt-[-4px];
+    content: counter(step);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+}

@@ -1,4 +1,6 @@
 import { COLLECTION_SLUG_MEDIA, media, pages, sessions, users } from '@/payload/collections'
+import { Footer } from '@/payload/globals/Footer'
+import { Header } from '@/payload/globals/Header'
 import { siteSettings } from '@/payload/globals/site-settings'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
@@ -30,7 +32,7 @@ const storageAdapter = s3Adapter({
 
 export default buildConfig({
   editor: lexicalEditor(),
-  globals: [siteSettings],
+  globals: [siteSettings, Header, Footer],
   collections: [users, pages, media, sessions],
   secret: process.env.AUTH_SECRET || '',
   typescript: {
