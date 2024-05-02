@@ -1,9 +1,9 @@
 'use client'
 
 import { Alert } from '@/components/ui/Alert'
-import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
+import { Button } from '@/components/ui/button'
 import GithubLogo from '@/public/icons/github-logo.svg'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'

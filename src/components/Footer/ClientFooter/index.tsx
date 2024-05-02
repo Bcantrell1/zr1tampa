@@ -5,8 +5,8 @@ import React from 'react'
 import Balancer from 'react-wrap-balancer'
 
 import { Section } from '@/components/Section'
+import { Button } from '@/components/ui/button'
 import type { Footer } from 'payload-types'
-import { Button } from '../../ui/button'
 
 export default function Footer({ initialFooter }: { initialFooter: Footer | null }) {
   const navItems = initialFooter?.navItems || []
@@ -51,7 +51,7 @@ export default function Footer({ initialFooter }: { initialFooter: Footer | null
             </Button>
           </div>
           <p className="text-muted-foreground">
-              Zr1 Tampa | All rights reserved. 2024-present. | Dev © <a href="https://github.com/bcantrell1">Bcantrell1</a>
+              Zr1 Tampa | All rights reserved. 2024-present. | Dev © <a href="https://github.com/bcantrell1">Bcantrell</a>
           </p>
         </div>
       </Section>
