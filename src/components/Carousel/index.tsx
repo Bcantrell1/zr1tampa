@@ -139,6 +139,7 @@ const Column = ({ children, className, href, onMouseEnter, onMouseLeave }) => {
     <Link
       className={`${className} border-r border-r-gray-400 border-opacity-55 pl-3 pr-3 pb-6 group flex flex-col align-end justify-end`}
       href={href}
+			prefetch={false}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >

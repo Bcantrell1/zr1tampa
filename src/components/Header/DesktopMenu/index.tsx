@@ -27,8 +27,6 @@ export const DesktopMenu: React.FC<{ header: any }> = ({ header }) => {
                     ? ''
                     : item.links[0].link.reference.value.slug
                 }`
-
-								console.log(item.links[0].link.reference.value.slug);
                 return <SingleNav key={i} label={item.links[0].link.label} link={href} />
               }
               return <MultiNav key={i} label={item.label} small={false} links={item.links} />
