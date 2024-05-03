@@ -1,3 +1,4 @@
+'use client'
 import LogoDark from '@/public/logo_dark.png'
 import LogoLight from '@/public/logo_light.png'
 import NextImage from 'next/image'

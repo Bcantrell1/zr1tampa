@@ -1,3 +1,4 @@
+'use client'
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import { MenuIcon } from 'lucide-react'
 import React from 'react'

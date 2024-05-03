@@ -1,3 +1,4 @@
+'use client'
 import { NavigationMenuLink } from '@/components/ui/navigation-menu'
 import cn from '@/utils/cn'
 import React, { forwardRef } from 'react'
