@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import { Button } from '@/components/ui/button'
+import teleIcon from '@/public/icons/telephone.svg'
 import { ModeToggle } from '../../theme-toggle'
 import { NavigationMenu, NavigationMenuList } from '../../ui/navigation-menu'
 import { CompanyNav } from './CompanyNav'
@@ -60,7 +61,7 @@ export const DesktopMenu: React.FC<{ header: any }> = ({ header }) => {
         </Link>
         <ModeToggle />
         <Link prefetch={false} href="tel:+15202365474">
-          <Image alt="Zr1 Phone" height={40} src="@/public/icons/telephone.svg" width={40} />
+          <Image alt="Zr1 Phone" height={40} src={teleIcon} width={40} />
         </Link>
       </div>
     </React.Fragment>
