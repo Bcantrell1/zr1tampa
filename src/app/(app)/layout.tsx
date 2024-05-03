@@ -2,11 +2,11 @@ import { Footer } from '@/components/Footer'
 import Header from '@/components/Header'
 import { ThemeProvider } from '@/components/theme-provider'
 import cn from '@/utils/cn'
-import { Inter } from 'next/font/google'
+import { Inter as FontSans } from 'next/font/google'
 
 import '../../../globals.css'
 
-const inter = Inter({
+const fontSans = FontSans({
   subsets: ['latin'],
   weight: 'variable',
   variable: '--font-inter',
@@ -18,7 +18,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = async ({ children }) => 
     <html lang="en" suppressHydrationWarning>
       <body className={`${cn(
           'min-h-screen h-full bg-background font-sans antialiased',
-          inter.variable,
+          fontSans.variable,
         )}`}>
          <ThemeProvider
           attribute="class"

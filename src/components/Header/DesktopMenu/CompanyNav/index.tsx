@@ -35,7 +35,7 @@ export const CompanyNav = ({ label, links }: {label: string, links: any}) => {
               item.link.reference.value.slug === 'home' ? '' : item.link.reference.value.slug
             }`
             return (
-              <Link href={href} key={i} passHref>
+              <Link href={href || '#'} key={i}>
                 <ListItem title={item.link.label}>{item.link.description}</ListItem>
               </Link>
             )

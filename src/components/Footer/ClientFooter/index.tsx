@@ -30,7 +30,7 @@ export default function Footer({ initialFooter }: { initialFooter: Footer | null
           </div>
           <div className="flex gap-4 flex-col md:flex-row mb-4 md:mb-0">
             {navItems.map(navItem => (
-              <Link href={navItem.link?.url || ''} key={navItem?.link?.url}>
+              <Link href={navItem?.link?.url || '#'} key={navItem?.link?.url}>
                 {navItem?.link?.label}
               </Link>
             ))}

@@ -11,7 +11,7 @@ import {
 export const SingleNav = ({ label, link }: {label: string, link: string}) => {
   return (
     <NavigationMenuItem>
-      <Link href={link} legacyBehavior passHref>
+      <Link href={link} legacyBehavior>
         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
           <p className="font-bold">{label}</p>
         </NavigationMenuLink>

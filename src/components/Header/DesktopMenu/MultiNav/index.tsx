@@ -26,7 +26,7 @@ export const MultiNav = ({ label, links, small = false }: {label: any, links: an
               item.link.reference.value.slug === 'home' ? '' : item.link.reference.value.slug
             }`
             return (
-              <Link href={href} key={i} passHref>
+              <Link href={href || '#'} key={i}>
                 <ListItem title={item.link.label}>{item.link.description}</ListItem>
               </Link>
             )
