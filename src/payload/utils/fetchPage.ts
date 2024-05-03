@@ -1,9 +1,9 @@
-import 'server-only'
 import { getPayload } from '@/lib/payload'
 import { COLLECTION_SLUG_PAGE } from '@/payload/collections/pages'
-import { notFound } from 'next/navigation'
-import { Page } from '~/payload-types'
 import ensurePath from '@/utils/ensurePath'
+import { notFound } from 'next/navigation'
+import 'server-only'
+import { Page } from '~/payload-types'
 
 const fetchPage = async (path: string | string[]): Promise<Page | null> => {
   if (!path) path = '/'
@@ -13,7 +13,7 @@ const fetchPage = async (path: string | string[]): Promise<Page | null> => {
   const { docs } = await payload.find({
     collection: COLLECTION_SLUG_PAGE,
     where: { path: { equals: path } },
-    depth: 3
+    depth: 3,
   })
   if (docs?.length === 0) {
     notFound()

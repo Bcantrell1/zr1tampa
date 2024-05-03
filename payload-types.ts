@@ -68,11 +68,36 @@ export interface User {
 export interface Page {
   id: string;
   title?: string | null;
-  blocks?: HeroBannerBlock[] | null;
+  hero: {
+    type: 'none' | 'heroCaro';
+    mediaGroup?:
+      | {
+          media: string | Media;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  layout?: HeroBannerBlock[] | null;
   slug?: string | null;
   path?: string | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media".
+ */
+export interface Media {
+  id: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -98,22 +123,6 @@ export interface HeroBannerBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'HeroBanner';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "media".
- */
-export interface Media {
-  id: string;
-  updatedAt: string;
-  createdAt: string;
-  url?: string | null;
-  thumbnailURL?: string | null;
-  filename?: string | null;
-  mimeType?: string | null;
-  filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

@@ -16,7 +16,17 @@ const nextConfig = {
           as: '*.js'
         }
       }
-    }
+    },
+		images: {
+			remotePatterns: [
+				{
+					protocol: process.env.S3_PROTOCOL,
+					hostname: process.env.S3_HOSTNAME,
+					port: '',
+					pathname: '/**'
+				}
+			]
+		}
   },
   images: {
     remotePatterns: [
