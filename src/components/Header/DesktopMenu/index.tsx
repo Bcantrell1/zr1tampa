@@ -23,10 +23,12 @@ export const DesktopMenu: React.FC<{ header: any }> = ({ header }) => {
             {firstFourNavGroups.map((item: any, i: any) => {
               if (item.links.length == 1) {
                 const href = `/${
-                  item.links[0].link.reference.value.slug === 'home'
+                  item.links[0].link.reference.value.slug === '<empty string>'
                     ? ''
                     : item.links[0].link.reference.value.slug
                 }`
+
+								console.log(item.links[0].link.reference.value.slug);
                 return <SingleNav key={i} label={item.links[0].link.label} link={href} />
               }
               return <MultiNav key={i} label={item.label} small={false} links={item.links} />
@@ -38,7 +40,7 @@ export const DesktopMenu: React.FC<{ header: any }> = ({ header }) => {
             {lastOfNavGroups.map((item: any, i: any) => {
               if (item.links.length == 1) {
                 const href = `/${
-                  item.links[0].link.reference.value.slug === 'home'
+                  item.links[0].link.reference.value.slug === '<empty string>'
                     ? ''
                     : item.links[0].link.reference.value.slug
                 }`

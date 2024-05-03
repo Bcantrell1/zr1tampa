@@ -8,7 +8,7 @@ export const Logo: React.FC = () => {
   return (
     <React.Fragment>
       {/* Light Logo */}
-      <Link prefetch className="hidden dark:block" as={'/'} href="/">
+      <Link className="hidden dark:block" href="/">
         <NextImage
           alt="Zr1 Logo"
           className="h-12 sm:h-16 md:h-24 lg:h-28 w-full md:w-[330px]"
@@ -20,7 +20,7 @@ export const Logo: React.FC = () => {
       </Link>
 
       {/* Dark Logo */}
-      <Link prefetch className="dark:hidden" as={"/"} href="/">
+      <Link className="dark:hidden" href="/">
         <NextImage
           alt="Zr1 Logo"
           className="h-12 sm:h-16 md:h-24 lg:h-28 w-full md:w-[330px]"
