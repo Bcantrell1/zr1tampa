@@ -23,7 +23,7 @@ export const DesktopMenu: React.FC<{ header: any }> = ({ header }) => {
             {firstFourNavGroups.map((item: any, i: any) => {
               if (item.links.length == 1) {
                 const href = `/${
-                  item.links[0].link.reference.value.slug === '<empty string>'
+                  item.links[0].link.reference.value.path === '/'
                     ? ''
                     : item.links[0].link.reference.value.slug
                 }`
@@ -38,7 +38,7 @@ export const DesktopMenu: React.FC<{ header: any }> = ({ header }) => {
             {lastOfNavGroups.map((item: any, i: any) => {
               if (item.links.length == 1) {
                 const href = `/${
-                  item.links[0].link.reference.value.slug === '<empty string>'
+                  item.links[0].link.reference.value.path === '/'
                     ? ''
                     : item.links[0].link.reference.value.slug
                 }`
