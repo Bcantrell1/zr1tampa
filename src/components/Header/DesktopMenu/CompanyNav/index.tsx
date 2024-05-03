@@ -16,11 +16,11 @@ export const CompanyNav = ({ label, links }: {label: string, links: any}) => {
       <NavigationMenuContent>
         <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
           <div className="row-span-3">
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink>
               <Link
                 className="flex h-full w-full select-none flex-col justify-end bg-opacity-0 rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                 href="/about"
-								prefetch={false}
+								prefetch
                 style={{
                   backgroundImage: `url('/cody_owner.jpg')`,
                   backgroundPosition: 'right',
@@ -36,7 +36,7 @@ export const CompanyNav = ({ label, links }: {label: string, links: any}) => {
               item.link.reference.value.slug === 'home' ? '' : item.link.reference.value.slug
             }`
             return (
-              <Link prefetch={false} href={href || '#'} key={i}>
+              <Link prefetch as={href} href={href} key={i}>
                 <ListItem title={item.link.label}>{item.link.description}</ListItem>
               </Link>
             )
