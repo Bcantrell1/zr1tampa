@@ -55,13 +55,13 @@ export const DesktopMenu: React.FC<{ header: any }> = ({ header }) => {
         </NavigationMenu>
       </div>
       <div className="flex justify-center gap-3">
-        <Link prefetch={false} href="/contact">
+        <Link href="/contact">
           <Button className="font-bold" variant="outline">
             Contact Us
           </Button>
         </Link>
         <ModeToggle />
-        <Link prefetch={false} href="tel:+15202365474">
+        <Link href="tel:+15202365474">
           <Image alt="Zr1 Phone" height={40} src={teleIcon} width={40} />
         </Link>
       </div>

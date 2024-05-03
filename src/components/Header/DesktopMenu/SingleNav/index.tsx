@@ -11,14 +11,12 @@ import {
 
 export const SingleNav = ({ label, link }: {label: string, link: string}) => {
   return (
-    <NavigationMenuItem>
-			<NavigationMenuContent>
-				<Link prefetch as={link} href={link}>
+    <NavigationMenuItem asChild>
+				<Link href={link}>
 					<NavigationMenuLink className={navigationMenuTriggerStyle()}>
 						<p className="font-bold">{label}</p>
 					</NavigationMenuLink>
 				</Link>
-			</NavigationMenuContent>
     </NavigationMenuItem>
   )
 }
