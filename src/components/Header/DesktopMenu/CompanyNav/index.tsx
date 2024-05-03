@@ -9,7 +9,7 @@ import {
 } from '../../../ui/navigation-menu'
 import ListItem from '../../ListItem'
 
-export const CompanyNav = ({ label, links }: {label: string, links: array}) => {
+export const CompanyNav = ({ label, links }: {label: string, links: any}) => {
   return (
     <NavigationMenuItem>
       <NavigationMenuTrigger className="font-bold">{label}</NavigationMenuTrigger>

@@ -1,4 +1,3 @@
-import Container from '@/components/Container'
 import LexicalContent from '@/components/LexicalContent'
 import Image from 'next/image'
 import { HeroBannerBlock } from '~/payload-types'
@@ -8,12 +7,10 @@ const HeroBanner = ({ content, backgroundImage, blockIndex }: HeroBannerBlock & 
   return (
     <section className="flex h-[50dvh] min-h-[500px]">
       <div className="relative z-10 flex grow items-center">
-        <Container>
           <div className="prose prose-lg dark:prose-invert">
             {/**@ts-ignore */}
             <LexicalContent childrenNodes={content.root.children} locale={'en'} lazyLoadImages={blockIndex < 2} />
           </div>
-        </Container>
       </div>
       {imageSrc && (
         <Image
