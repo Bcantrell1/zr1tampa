@@ -3,7 +3,7 @@ import { Hero } from '@/components/Hero'
 import fetchPage from '@/payload/utils/fetchPage'
 import React from 'react'
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'auto'
 export const revalidate = 0
 
 const Page = async ({ params }: { params: { path: string[] } }) => {
