@@ -16,12 +16,12 @@ export default function Footer({ initialFooter }: { initialFooter: Footer | null
       <Section>
         <div className="grid gap-6 mx-auto p-6 sm:p-8">
           <div className="flex flex-col gap-6 not-prose ">
-            <Link className="hidden dark:block w-fit" href="/">
+            <Link prefetch={false} className="hidden dark:block w-fit" href="/">
               <Image alt="Zr1 Logo" height={37} src="/logo_light.png" width={140} />
             </Link>
 
             {/* Dark Logo */}
-            <Link className="dark:hidden w-fit" href="/">
+            <Link prefetch={false} className="dark:hidden w-fit" href="/">
               <Image alt="Zr1 Logo" height={37} src="/logo_dark.png" width={140} />
             </Link>
             <p>
@@ -30,12 +30,12 @@ export default function Footer({ initialFooter }: { initialFooter: Footer | null
           </div>
           <div className="flex gap-4 flex-col md:flex-row mb-4 md:mb-0">
             {navItems.map(navItem => (
-              <Link href={navItem?.link?.url || '#'} key={navItem?.link?.url}>
+              <Link prefetch={false} href={navItem?.link?.url || '#'} key={navItem?.link?.url}>
                 {navItem?.link?.label}
               </Link>
             ))}
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms-of-service">Terms of Service</Link>
+            <Link prefetch={false} href="/privacy-policy">Privacy Policy</Link>
+            <Link prefetch={false} href="/terms-of-service">Terms of Service</Link>
           </div>
         </div>
         <div className="border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center mx-auto p-6 sm:p-8">

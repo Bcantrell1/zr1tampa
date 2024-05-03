@@ -20,6 +20,7 @@ export const CompanyNav = ({ label, links }: {label: string, links: any}) => {
               <Link
                 className="flex h-full w-full select-none flex-col justify-end bg-opacity-0 rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                 href="/about"
+								prefetch={false}
                 style={{
                   backgroundImage: `url('/cody_owner.jpg')`,
                   backgroundPosition: 'right',
@@ -35,7 +36,7 @@ export const CompanyNav = ({ label, links }: {label: string, links: any}) => {
               item.link.reference.value.slug === 'home' ? '' : item.link.reference.value.slug
             }`
             return (
-              <Link href={href || '#'} key={i}>
+              <Link prefetch={false} href={href || '#'} key={i}>
                 <ListItem title={item.link.label}>{item.link.description}</ListItem>
               </Link>
             )
