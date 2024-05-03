@@ -60,7 +60,7 @@ export const DesktopMenu: React.FC<{ header: any }> = ({ header }) => {
         </Link>
         <ModeToggle />
         <Link prefetch={false} href="tel:+15202365474">
-          <Image alt="Zr1 Phone" height={40} src="/icons/telephone.svg" width={40} />
+          <Image alt="Zr1 Phone" height={40} src="@/public/icons/telephone.svg" width={40} />
         </Link>
       </div>
     </React.Fragment>
