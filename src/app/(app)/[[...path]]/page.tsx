@@ -19,9 +19,9 @@ const Page = async ({ params }: { params: { path: string[] } }) => {
 export async function generateStaticParams() {
   try {
     const pages = await fetchPage('pages')
-    return pages?.slug
+    return [pages?.slug]
   } catch (error) {
-    return '/'
+    return []
   }
 }
 
