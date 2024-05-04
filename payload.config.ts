@@ -10,6 +10,7 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import nodemailer from 'nodemailer'
 import path from 'path'
 import { buildConfig } from 'payload/config'
+import { en } from 'payload/i18n/en'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 
@@ -52,6 +53,9 @@ export default buildConfig({
 			}
 		})
 	}),
+	i18n: {
+    supportedLanguages: { en }
+  },
 	plugins: [
 		cloudStorage({
 			collections: {
