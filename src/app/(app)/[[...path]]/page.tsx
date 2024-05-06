@@ -9,12 +9,6 @@ export const revalidate = 0
 const Page = async ({ params }: { params: { path: string[] } }) => {
   const page = await fetchPage(params.path)
 
-	useEffect(() => {
-		if(!page) {
-			return
-		}
-	},[page])
-
   return (
 		<React.Fragment>
 			<Hero {...page?.hero ||  <></>} />
