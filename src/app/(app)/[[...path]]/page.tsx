@@ -4,6 +4,7 @@ import fetchPage from '@/payload/utils/fetchPage'
 import React from 'react'
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const Page = async ({ params }: { params: { path: string[] } }) => {
   const page = await fetchPage(params.path)
@@ -14,15 +15,6 @@ const Page = async ({ params }: { params: { path: string[] } }) => {
 			{/* <Blocks blocks={page?.layout} locale="en" /> */}
 		</React.Fragment>
 	);
-}
-
-export async function generateStaticParams() {
-  try {
-    const pages = await fetchPage('pages')
-    return [pages?.slug]
-  } catch (error) {
-    return []
-  }
 }
 
 export default Page

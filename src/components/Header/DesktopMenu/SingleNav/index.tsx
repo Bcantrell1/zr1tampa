@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import React from 'react'
 
-import { NavigationMenuContent } from '@radix-ui/react-navigation-menu'
 import {
 	NavigationMenuItem,
 	NavigationMenuLink,
