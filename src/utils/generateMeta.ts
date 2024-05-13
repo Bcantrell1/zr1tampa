@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Page } from '~/payload-types'
 import { mergeOpenGraph } from './mergeOpenGraph'
 
-// eslint-disable-next-line @typescript-eslint/require-await
 export const generateMeta = async (args: { doc: Page }): Promise<Metadata> => {
   const { doc } = args || {}
 
@@ -16,7 +15,7 @@ export const generateMeta = async (args: { doc: Page }): Promise<Metadata> => {
   return {
     description: doc?.meta?.description,
     openGraph: mergeOpenGraph({
-      description: doc?.meta?.description,
+      description: doc?.meta?.description || undefined,
       images: ogImage
         ? [
             {

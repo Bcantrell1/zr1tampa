@@ -68,7 +68,7 @@ export interface User {
  */
 export interface Page {
   id: string;
-  title?: string | null;
+  title: string;
   hero: {
     type: 'none' | 'heroCaro';
     mediaGroup?:
@@ -81,6 +81,11 @@ export interface Page {
   layout?: HeroBannerBlock[] | null;
   slug?: string | null;
   path?: string | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    image?: string | Media | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
