@@ -9,12 +9,14 @@ export const COLLECTION_SLUG_PAGE = 'pages'
 export const pages: CollectionConfig = {
   slug: COLLECTION_SLUG_PAGE,
   admin: {
+		defaultColumns: ['title', 'slug', 'updatedAt'],
     useAsTitle: 'title'
   },
   fields: [
     {
       name: 'title',
-      type: 'text'
+      type: 'text',
+			required: true
     },
 		{
       type: 'tabs',

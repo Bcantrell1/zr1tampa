@@ -4,6 +4,8 @@ import { ThemeProvider } from '@/components/theme-provider'
 import cn from '@/utils/cn'
 import { Inter as FontSans } from 'next/font/google'
 
+import { mergeOpenGraph } from '@/utils/mergeOpenGraph'
+import { Metadata } from 'next'
 import '../../../globals.css'
 
 const fontSans = FontSans({
@@ -13,7 +15,7 @@ const fontSans = FontSans({
   display: 'swap'
 })
 
-const Layout: React.FC<{ children: React.ReactNode }> = async ({ children }) => {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${cn(
@@ -35,4 +37,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = async ({ children }) => 
   )
 }
 
-export default Layout
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'https://google.com'),
+  openGraph: mergeOpenGraph(),
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@bcantrell1',
+  },
+}

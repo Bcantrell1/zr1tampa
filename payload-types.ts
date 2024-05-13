@@ -12,6 +12,7 @@ export interface Config {
     pages: Page;
     media: Media;
     sessions: Session;
+    redirects: Redirect;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
@@ -133,6 +134,24 @@ export interface Session {
   user: string | User;
   sessionToken: string;
   expires?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects".
+ */
+export interface Redirect {
+  id: string;
+  from: string;
+  to?: {
+    type?: ('reference' | 'custom') | null;
+    reference?: {
+      relationTo: 'pages';
+      value: string | Page;
+    } | null;
+    url?: string | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
